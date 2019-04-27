@@ -3,7 +3,7 @@ const path = require("path");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 
-const connectDatabase = require("./helpers/database").connect;
+// const connectDatabase = require("./helpers/database").connect;
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./modules/users/usersRouter");
@@ -11,7 +11,7 @@ const tasksRouter = require("./modules/tasks/tasksRouter");
 
 const app = express();
 
-connectDatabase();
+// connectDatabase();
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
